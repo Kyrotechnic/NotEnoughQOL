@@ -27,6 +27,7 @@ public class AnimationCreator extends Module
     
     public AnimationCreator() {
         super("Animation helper", Category.RENDER);
+        this.setDescription("Advanced animation creator");
         this.swingProgress = new BooleanSetting("Swing Progress", false);
         this.blockProgress = new BooleanSetting("Block Progress", true);
         this.angle1 = new NumberSetting("angle1", 30.0, -180.0, 180.0, 1.0);

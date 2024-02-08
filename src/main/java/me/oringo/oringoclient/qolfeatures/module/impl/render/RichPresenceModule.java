@@ -23,6 +23,7 @@ public class RichPresenceModule extends Module
     
     public RichPresenceModule() {
         super("Discord RPC", 0, Category.RENDER);
+        this.setDescription("Discord rich presence");
         this.setToggled(true);
     }
     

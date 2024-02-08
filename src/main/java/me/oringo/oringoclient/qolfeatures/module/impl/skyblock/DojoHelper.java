@@ -46,6 +46,9 @@ public class DojoHelper extends Module
     
     public DojoHelper() {
         super("Dojo Helper", Category.SKYBLOCK);
+
+        this.setDescription("Makes dojo super easy");
+
         this.addSettings(DojoHelper.hideZombies, DojoHelper.swordSwap, DojoHelper.tenacity, DojoHelper.masteryAimbot, DojoHelper.wTap, DojoHelper.time, DojoHelper.bowCharge, DojoHelper.color);
     }
     

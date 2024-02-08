@@ -19,6 +19,7 @@ public class ServerRotations extends Module
     
     public ServerRotations() {
         super("Server Rotations", Category.RENDER);
+        this.setDescription("Shows more smooth rotations in F5");
         this.onlyKillAura = new BooleanSetting("Only aura rotations", false);
         this.setToggled(true);
         this.addSettings(this.onlyKillAura);

@@ -23,6 +23,7 @@ public class CustomESP extends Module
     
     public CustomESP() {
         super("Custom ESP", Category.RENDER);
+        this.setDescription("Skyblock entity ESP");
         this.mode = new ModeSetting("Mode", "2D", new String[] { "2D", "Box", "Tracers" });
         this.addSettings(this.mode);
     }

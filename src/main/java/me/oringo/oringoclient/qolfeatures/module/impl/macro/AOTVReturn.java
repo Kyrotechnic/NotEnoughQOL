@@ -43,6 +43,9 @@ public class AOTVReturn extends Module
     
     public AOTVReturn() {
         super("AOTV Return", Category.OTHER);
+
+        this.setDescription("Automatically AOTV returns for mithril macro");
+
         this.warp = new StringSetting("Warp command", "/warp forge");
         this.coords = new StringSetting("TP Coords", "0.5,167,-10.5;-23.5,180,-26.5;-64.5,212,-15.5;-33.5,244,-32.5");
         this.chat = new BooleanSetting("Open chat", true);

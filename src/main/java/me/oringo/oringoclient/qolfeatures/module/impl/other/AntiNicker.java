@@ -25,6 +25,10 @@ public class AntiNicker extends Module
     
     public AntiNicker() {
         super("Anti Nicker", 0, Category.OTHER);
+
+        this.setDescription("Finds players who are nicked");
+
+        this.flag = FlagType.SAFE;
     }
     
     public static String getRealName(final GameProfile profile) {

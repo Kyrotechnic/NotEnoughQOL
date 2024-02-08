@@ -21,6 +21,8 @@ public class AutoClicker extends Module
     
     public AutoClicker() {
         super("AutoClicker", Category.COMBAT);
+        this.setDescription("Automatically clicks for you");
+        this.flag = FlagType.SAFE;
         this.timer = new MilliTimer();
         this.nextDelay = 10.0;
         this.addSettings(AutoClicker.minCps, AutoClicker.maxCps, AutoClicker.mode);

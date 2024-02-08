@@ -23,6 +23,7 @@ public class ChestESP extends Module
     
     public ChestESP() {
         super("ChestESP", Category.RENDER);
+        this.setDescription("Shows all chests");
         this.tracer = new BooleanSetting("Tracer", true);
         this.addSettings(this.tracer);
     }

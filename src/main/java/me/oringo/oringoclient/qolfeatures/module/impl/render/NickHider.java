@@ -14,6 +14,7 @@ public class NickHider extends Module
     
     public NickHider() {
         super("Nick Hider", 0, Category.RENDER);
+        this.setDescription("Changes your name clientside");
         this.name = new StringSetting("Name");
         this.addSettings(this.name);
     }

@@ -7,6 +7,7 @@ package me.oringo.oringoclient;
 import me.oringo.oringoclient.qolfeatures.module.impl.dungeons.*;
 import me.oringo.oringoclient.qolfeatures.module.impl.kuudra.KuudraTracker;
 import me.oringo.oringoclient.qolfeatures.module.impl.other.Timer;
+import me.oringo.oringoclient.utils.bazaar.Bazaar;
 import net.minecraftforge.fml.common.*;
 import net.minecraft.client.*;
 import java.util.logging.*;
@@ -98,6 +99,7 @@ public class OringoClient
     public static ArrayList<Runnable> scheduledTasks;
     public static HashMap<String, ResourceLocation> capes;
     public static HashMap<File, ResourceLocation> capesLoaded;
+    public static final Bazaar bazaar = new Bazaar();
     private MilliTimer timer;
     private boolean wasOnline;
     public static ClientMode mode = ClientMode.PRIVATE;
@@ -235,6 +237,8 @@ public class OringoClient
         modules.stream().forEach(c -> {
             if (c instanceof NoRender)
                 c.setToggled(false);
+            else if (c.getCategory() == Module.Category.RENDER)
+                c.flag = Module.FlagType.SAFE;
         });
 
         ModUtils.loadPresentMods();
@@ -288,6 +292,8 @@ public class OringoClient
                 if (m.isKeybind()) {
                     continue;
                 }
+                if (m.flag == Module.FlagType.RISKY && clickGui.hideRisky.isEnabled())
+                    continue;
                 m.toggle();
                 if (OringoClient.clickGui.disableNotifs.isEnabled()) {
                     continue;

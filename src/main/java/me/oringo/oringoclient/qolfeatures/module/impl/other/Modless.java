@@ -10,5 +10,9 @@ public class Modless extends Module
 {
     public Modless() {
         super("Hide modlist", 0, Category.OTHER);
+
+        this.setDescription("Hides your mod list");
+
+        this.flag = FlagType.SAFE;
     }
 }

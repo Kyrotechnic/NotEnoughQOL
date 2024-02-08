@@ -22,6 +22,9 @@ public class WTap extends Module
     
     public WTap() {
         super("WTap", Category.COMBAT);
+
+        this.setDescription("Automatically W taps your opponent");
+
         this.mode = new ModeSetting("mode", "Packet", new String[] { "Packet", "Extra Packet" });
         this.bow = new BooleanSetting("Bow", true);
         this.addSettings(this.mode, this.bow);

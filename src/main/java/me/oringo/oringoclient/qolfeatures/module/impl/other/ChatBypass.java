@@ -22,6 +22,9 @@ public class ChatBypass extends Module
     
     public ChatBypass() {
         super("Chat bypass", 0, Category.OTHER);
+
+        this.setDescription("Bypasses hypixel's filter");
+
         this.prefix = "";
         this.mode = new ModeSetting("mode", "font", new String[] { "font", "dots" });
         this.addSettings(this.mode);

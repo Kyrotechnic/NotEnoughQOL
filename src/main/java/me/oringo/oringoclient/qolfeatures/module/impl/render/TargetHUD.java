@@ -29,6 +29,7 @@ public class TargetHUD extends Module
     
     public TargetHUD() {
         super("Target HUD", Category.RENDER);
+        this.setDescription("Shows the entity you're attacking");
         this.blurStrength = new ModeSetting("Blur Strength", "Low", new String[] { "None", "Low", "High" });
         this.targetESP = new BooleanSetting("Target ESP", true);
         this.x = new NumberSetting("X123", 0.0, -100000.0, 100000.0, 1.0E-5, a -> true);

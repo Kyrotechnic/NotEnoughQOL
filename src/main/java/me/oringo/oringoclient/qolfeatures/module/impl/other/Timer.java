@@ -17,6 +17,9 @@ public class Timer extends Module
     
     public Timer() {
         super("Timer", Category.OTHER);
+
+        this.setDescription("Increases game tick speed");
+
         this.addSettings(Timer.timer);
     }
     

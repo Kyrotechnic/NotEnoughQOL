@@ -27,6 +27,8 @@ public class PlayerESP extends Module
     
     public PlayerESP() {
         super("PlayerESP", 0, Category.RENDER);
+
+        this.setDescription("ESP for players, works well");
         this.mode = new ModeSetting("Mode", "2D", new String[] { "Outline", "2D", "Chams", "Box", "Tracers" });
         this.opacity = new NumberSetting("Opacity", 255.0, 0.0, 255.0, 1.0) {
             @Override

@@ -22,6 +22,7 @@ public class NoRender extends Module
 {
     public NoRender() {
         super("NoRender", Category.RENDER);
+        this.setDescription("idek what this is");
     }
     
     @Override

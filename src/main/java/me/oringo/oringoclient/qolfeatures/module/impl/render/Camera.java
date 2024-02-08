@@ -19,6 +19,7 @@ public class Camera extends Module
     
     public Camera() {
         super("Camera", Category.RENDER);
+        this.setDescription("Modify how f5 changes, and how far it goes");
         this.cameraClip = new BooleanSetting("Camera Clip", true);
         this.noHurtCam = new BooleanSetting("No hurt cam", false);
         this.smoothF5 = new BooleanSetting("Smooth f5", true);

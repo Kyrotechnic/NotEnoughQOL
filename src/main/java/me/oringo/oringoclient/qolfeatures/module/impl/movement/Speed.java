@@ -35,6 +35,9 @@ public class Speed extends Module
     
     public Speed() {
         super("Speed", Category.PLAYER);
+
+        this.setDescription("Increaes player speed");
+
         this.stopOnDisable = new BooleanSetting("Stop on disable", true);
         this.disableOnFlag = new BooleanSetting("Disable on flag", true);
         this.sneak = new BooleanSetting("Sneak timer", true);

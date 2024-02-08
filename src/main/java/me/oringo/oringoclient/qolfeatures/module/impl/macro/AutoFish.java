@@ -22,6 +22,9 @@ public class AutoFish extends Module
     
     public AutoFish() {
         super("Auto Fish", Category.OTHER);
+
+        this.setDescription("Automatically fishes");
+
         this.hookDelay = new MilliTimer();
         this.addSettings(new Setting[0]);
     }

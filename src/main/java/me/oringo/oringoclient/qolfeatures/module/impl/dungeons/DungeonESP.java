@@ -44,6 +44,11 @@ public class DungeonESP extends Module
     
     public DungeonESP() {
         super("Dungeon ESP", 0, Category.DUNGEONS);
+
+        this.setDescription("Dungeon specific ESP");
+
+        this.flag = FlagType.SAFE;
+
         this.bat = new BooleanSetting("Bat ESP", true);
         this.starred = new BooleanSetting("Starred ESP", true);
         this.enderman = new BooleanSetting("Show endermen", true);

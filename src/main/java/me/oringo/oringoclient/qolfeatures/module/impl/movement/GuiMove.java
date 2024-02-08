@@ -29,6 +29,9 @@ public class GuiMove extends Module
     
     public GuiMove() {
         super("InvMove", Category.PLAYER);
+
+        this.setDescription("Move while inventory is open");
+
         this.rotate = new BooleanSetting("Rotate", true);
         this.drag = new BooleanSetting("Alt drag", true) {
             @Override

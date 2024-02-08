@@ -51,6 +51,24 @@ public class Gui extends Module
     public BooleanSetting hsb;
     public static final StringSetting commandPrefix;
     public static final StringSetting clientName;
+    public BooleanSetting hideRisky = new BooleanSetting("Hide Risky Mods", false) {
+        @Override
+        public void toggle()
+        {
+            super.setEnabled(!this.isEnabled());
+
+            if (this.isEnabled())
+            {
+                for (Module module : OringoClient.modules)
+                {
+                    if (module.flag == FlagType.RISKY && module.isToggled())
+                    {
+                        module.setToggled(false);
+                    }
+                }
+            }
+        }
+    };
     public static boolean firstOpen = true;
     
     public Gui() {
@@ -76,7 +94,10 @@ public class Gui extends Module
         this.arrayOutline = new BooleanSetting("Array line", true);
         this.waterMark = new BooleanSetting("Watermark", true);
         this.hsb = new BooleanSetting("HSB ", true, aBoolean -> !this.colorMode.is("Color shift"));
-        this.addSettings(this.colorMode, this.hsb, this.rgbSpeed, this.shiftSpeed, this.redCustom, this.greenCustom, this.blueCustom, this.redShift1, this.greenShift1, this.blueShift1, this.redShift2, this.greenShift2, this.blueShift2, Gui.commandPrefix, this.blur, this.waterMark, Gui.clientName, this.arrayList, this.arrayOutline, this.arrayBlur, this.disableNotifs, this.scaleGui);
+
+        this.setDescription("The ClickGUI for NotEnoughQOL");
+
+        this.addSettings(this.colorMode, this.hsb, this.rgbSpeed, this.shiftSpeed, this.redCustom, this.greenCustom, this.blueCustom, this.redShift1, this.greenShift1, this.blueShift1, this.redShift2, this.greenShift2, this.blueShift2, Gui.commandPrefix, this.blur, this.waterMark, this.hideRisky, Gui.clientName, this.arrayList, this.arrayOutline, this.arrayBlur, this.disableNotifs, this.scaleGui);
     }
     
     public Color getColor() {

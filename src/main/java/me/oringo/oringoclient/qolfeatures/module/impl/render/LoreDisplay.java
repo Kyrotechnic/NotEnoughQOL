@@ -34,6 +34,8 @@ public class LoreDisplay extends Module {
     {
         super("Lore Display", Category.RENDER);
 
+        this.setDescription("Displays the lore of held item");
+
         this.x = new NumberSetting("X1234", 0.0, -100000.0, 100000.0, 1.0E-5, a -> true);
         this.y = new NumberSetting("Y1234", 100.0, -100000.0, 100000.0, 1.0E-5, a -> true);
 

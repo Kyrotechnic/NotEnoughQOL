@@ -24,6 +24,9 @@ public class ServerBeamer extends Module
     
     public ServerBeamer() {
         super("Server Beamer", Category.OTHER);
+
+        this.setDescription("Server crasher, got patched");
+
         this.beamer = new NumberSetting("Packets", 10.0, 1.0, 50.0, 1.0);
         this.randomSend = new NumberSetting("Send ticks", 0.0, 0.0, 100.0, 1.0);
         this.start = new BooleanSetting("Start Breaking", true);

@@ -21,6 +21,9 @@ public class ArmorSwap extends Module
     
     public ArmorSwap() {
         super("ArmorSwapper", Category.PLAYER);
+
+        this.setDescription("Automatically swaps armor");
+
         this.addSettings(ArmorSwap.items, ArmorSwap.startIndex);
     }
     

@@ -76,6 +76,9 @@ public class MithrilMacro extends Module
     
     public MithrilMacro() {
         super("Mithril Macro", 0, Category.OTHER);
+
+        this.setDescription("Automatically mines mithril for you");
+
         this.mc = Minecraft.getMinecraft();
         this.target = null;
         this.test = null;

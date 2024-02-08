@@ -32,6 +32,7 @@ public class ChestStealer extends Module
         this.close = new BooleanSetting("Auto close", true);
         this.nameCheck = new BooleanSetting("Name check", true);
         this.stealTrash = new BooleanSetting("Steal trash", false);
+        this.setDescription("Steals items from opened chest");
         this.addSettings(this.delay, this.nameCheck, this.stealTrash, this.close);
     }
     

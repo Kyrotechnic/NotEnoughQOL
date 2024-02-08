@@ -15,6 +15,9 @@ public class Sprint extends Module
     
     public Sprint() {
         super("Sprint", 0, Category.PLAYER);
+
+        this.setDescription("Keeps sprint when hitting mobs");
+
         this.omni = new BooleanSetting("OmniSprint", false);
         this.keep = new BooleanSetting("KeepSprint", true);
         this.addSettings(this.keep, this.omni);

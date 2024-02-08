@@ -20,6 +20,8 @@ public class CropNuker extends Module {
     {
         super("Crop Nuker", Category.SKYBLOCK);
 
+        this.setDescription("What the frick is an anticheat");
+
         addSettings(
                 nukerMode,
                 extra1,

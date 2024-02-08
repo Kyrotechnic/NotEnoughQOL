@@ -32,6 +32,7 @@ public class AimAssist extends Module
     
     public AimAssist() {
         super("Aim Assist", Category.COMBAT);
+        this.setDescription("Automatically aims at enemies for you");
         this.fov = new NumberSetting("Fov", 60.0, 30.0, 180.0, 1.0);
         this.speed = new NumberSetting("Max speed", 30.0, 1.0, 40.0, 0.1) {
             @Override

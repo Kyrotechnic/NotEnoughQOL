@@ -34,6 +34,8 @@ public class Module
     @SerializedName("settings")
     public ConfigManager.ConfigSetting[] cfgSettings;
     protected static final Logger LOGGER;
+    public String description = null;
+    public FlagType flag = FlagType.RISKY;
     private boolean devOnly;
     protected static final Minecraft mc;
     public final MilliTimer toggledTime;
@@ -63,6 +65,11 @@ public class Module
     }
     
     public void onSave() {
+    }
+
+    public void setDescription(String description)
+    {
+        this.description = description;
     }
     
     public boolean isKeybind() {
@@ -169,6 +176,12 @@ public class Module
     static {
         LOGGER = OringoClient.LOGGER;
         mc = Minecraft.getMinecraft();
+    }
+
+    public enum FlagType
+    {
+        SAFE,
+        RISKY
     }
     
     public enum Category

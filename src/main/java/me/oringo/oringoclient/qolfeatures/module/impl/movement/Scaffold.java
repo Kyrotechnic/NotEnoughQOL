@@ -41,6 +41,9 @@ public class Scaffold extends Module
     
     public Scaffold() {
         super("Scaffold", Category.PLAYER);
+
+        this.setDescription("Automatically bridges for you");
+
         this.timer1 = new MilliTimer();
         this.slowdowntimer = new MilliTimer();
         this.addSettings(Scaffold.distance, Scaffold.minDelay, Scaffold.maxDelay, Scaffold.timer, Scaffold.towerTimer, Scaffold.tower, Scaffold.sprint, Scaffold.safeWalk, Scaffold.disableSpeed, Scaffold.disableAura, Scaffold.safe);

@@ -34,6 +34,9 @@ public class Phase extends Module
     
     public Phase() {
         super("Stair Phase", Category.SKYBLOCK);
+
+        this.setDescription("Automatically phase into stairs");
+
         this.timer = new NumberSetting("Timer", 1.0, 0.1, 1.0, 0.1);
         this.activate = new ModeSetting("Activate", "on Key", new String[] { "Auto", "on Key", "Always" });
         this.clip = new BooleanSetting("Autoclip", true);

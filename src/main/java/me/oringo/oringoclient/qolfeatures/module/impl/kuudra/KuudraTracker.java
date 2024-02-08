@@ -6,5 +6,9 @@ public class KuudraTracker extends Module {
     public KuudraTracker()
     {
         super("Kuudra Tracker", Category.KUUDRA);
+
+        this.setDescription("Tracks kuudra profit and run times");
+
+        this.flag = FlagType.SAFE;
     }
 }

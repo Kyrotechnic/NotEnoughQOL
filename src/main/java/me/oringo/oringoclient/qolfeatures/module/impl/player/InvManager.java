@@ -68,6 +68,7 @@ public class InvManager extends Module
         this.bowSlot = new NumberSetting("Bow slot", 0.0, 0.0, 9.0, 1.0);
         this.dropSkyblock = Arrays.asList("Training Weight", "Healing Potion", "Beating Heart", "Premium Flesh", "Mimic Fragment", "Enchanted Rotten Flesh", "Machine Gun Bow", "Enchanted Bone", "Defuse Kit", "Enchanted Ice", "Diamond Atom", "Silent Death", "Cutlass", "Soulstealer Bow", "Sniper Bow", "Optical Lens", "Tripwire Hook", "Button", "Carpet", "Lever", "Journal Entry", "Sign", "Zombie Commander", "Zombie Lord", "Skeleton Master, Skeleton Grunt, Skeleton Lord, Zombie Soldier", "Zombie Knight", "Heavy", "Super Heavy", "Undead", "Bouncy", "Skeletor", "Trap", "Inflatable Jerry");
         this.dropSkywars = Arrays.asList("Egg", "Snowball", "Poison", "Lava", "Steak", "Enchanting", "Poison");
+        this.setDescription("Inventory clearer, drops stuff ig");
         this.addSettings(this.mode, this.delay, this.dropTrash, this.trashItems, this.middleClick, this.autoArmor, this.swordSlot, this.pickaxeSlot, this.axeSlot, this.shovelSlot, this.blockSlot);
     }
     

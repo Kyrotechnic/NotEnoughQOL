@@ -15,6 +15,8 @@ public class SafeWalk extends Module
 {
     public SafeWalk() {
         super("Eagle", 0, Category.PLAYER);
+
+        this.setDescription("Prevents walking off of bridge");
     }
     
     @Override

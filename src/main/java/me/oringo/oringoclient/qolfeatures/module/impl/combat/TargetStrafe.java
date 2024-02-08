@@ -36,6 +36,9 @@ public class TargetStrafe extends Module
     
     public TargetStrafe() {
         super("Target Strafe", Category.COMBAT);
+
+        this.setDescription("Strafes around your opponent");
+
         this.mode = new ModeSetting("Mode", "Normal", new String[] { "Normal", "Back" });
         this.distance = new NumberSetting("Distance", 2.0, 1.0, 4.0, 0.1);
         this.controllable = new BooleanSetting("Controllable", true);

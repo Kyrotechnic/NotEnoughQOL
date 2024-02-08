@@ -21,6 +21,10 @@ public class StaffAnalyser extends Module
     
     public StaffAnalyser() {
         super("Staff Analyser", Category.OTHER);
+
+        this.setDescription("Checks if players have been banned");
+        this.flag = FlagType.SAFE;
+
         this.delay = new NumberSetting("Delay", 5.0, 5.0, 60.0, 1.0);
         this.timer = new MilliTimer();
         this.lastBans = -1;

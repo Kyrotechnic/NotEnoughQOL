@@ -19,6 +19,9 @@ public class IceFillHelp extends Module
     
     public IceFillHelp() {
         super("Ice Fill Helper", Category.DUNGEONS);
+
+        this.setDescription("Helps to do icefill faster");
+
         this.slowdown = new NumberSetting("Ice slowdown", 0.15, 0.05, 1.0, 0.05);
         this.noIceSlip = new BooleanSetting("No ice slip", true);
         this.autoStop = new BooleanSetting("Auto stop", true);

@@ -19,6 +19,7 @@ public class Animations extends Module
     
     public Animations() {
         super("Animations", Category.RENDER);
+        this.setDescription("Change how your arm is rendered");
         this.x = new NumberSetting("x", 1.0, 0.01, 3.0, 0.02);
         this.y = new NumberSetting("y", 1.0, 0.01, 3.0, 0.02);
         this.z = new NumberSetting("z", 1.0, 0.01, 3.0, 0.02);

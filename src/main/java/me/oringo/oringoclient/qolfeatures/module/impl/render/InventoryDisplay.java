@@ -21,6 +21,9 @@ public class InventoryDisplay extends Module
     
     public InventoryDisplay() {
         super("Inventory HUD", 0, Category.RENDER);
+
+        this.setDescription("Shows what you have in your inventory");
+
         this.x = new NumberSetting("X1234", 0.0, -100000.0, 100000.0, 1.0E-5, a -> true);
         this.y = new NumberSetting("Y1234", 0.0, -100000.0, 100000.0, 1.0E-5, a -> true);
         this.blurStrength = new ModeSetting("Blur Strength", "Low", new String[] { "None", "Low", "High" });

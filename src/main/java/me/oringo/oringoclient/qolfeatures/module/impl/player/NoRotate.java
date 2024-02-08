@@ -23,6 +23,7 @@ public class NoRotate extends Module
     
     public NoRotate() {
         super("No Rotate", 0, Category.PLAYER);
+        this.setDescription("Disables server side rotations");
         this.keepMotion = new BooleanSetting("Keep motion", true);
         this.pitch = new BooleanSetting("0 pitch", false);
         this.addSettings(this.keepMotion, this.pitch);

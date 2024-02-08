@@ -27,6 +27,7 @@ public class FreeCam extends Module
     
     public FreeCam() {
         super("FreeCam", Category.RENDER);
+        this.setDescription("it's freecam");
         this.speed = new NumberSetting("Speed", 3.0, 0.1, 5.0, 0.1);
         this.tracer = new BooleanSetting("Show tracer", false);
         this.addSettings(this.speed, this.tracer);

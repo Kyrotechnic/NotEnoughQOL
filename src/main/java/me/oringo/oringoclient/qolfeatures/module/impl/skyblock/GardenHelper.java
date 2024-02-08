@@ -21,6 +21,8 @@ public class GardenHelper extends Module {
     {
         super("Garden Helper", Category.SKYBLOCK);
 
+        this.setDescription("Helps with garden to prevent bans");
+
         this.addSettings(
                 fixMushroom,
                 antiDesync

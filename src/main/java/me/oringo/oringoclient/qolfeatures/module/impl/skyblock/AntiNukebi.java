@@ -31,6 +31,7 @@ public class AntiNukebi extends Module
     
     public AntiNukebi() {
         super("AntiNukekubi", Category.SKYBLOCK);
+        this.setDescription("Automatically looks at eman skulls");
         this.timeoutTimer = new MilliTimer();
         this.addSettings(AntiNukebi.distance, AntiNukebi.attack, AntiNukebi.timeOut, AntiNukebi.tracer);
     }

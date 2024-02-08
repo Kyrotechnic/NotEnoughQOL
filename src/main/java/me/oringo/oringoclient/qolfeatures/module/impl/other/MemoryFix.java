@@ -7,5 +7,9 @@ public class MemoryFix extends Module {
     public MemoryFix()
     {
         super("Memory Fix", Category.OTHER);
+
+        this.setDescription("Fixes rampant memory usage");
+
+        this.flag = FlagType.SAFE;
     }
 }

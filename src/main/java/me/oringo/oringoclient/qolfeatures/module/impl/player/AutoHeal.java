@@ -44,6 +44,9 @@ public class AutoHeal extends Module
     public AutoHeal() {
         super("Auto Heal", Category.PLAYER);
         this.lastOverflow = 0;
+
+        this.setDescription("Automatically heals you");
+
         this.addSettings(AutoHeal.hp, AutoHeal.heads, AutoHeal.soup, AutoHeal.witherImpact, AutoHeal.witherImpactHP, AutoHeal.wand, AutoHeal.zombieSword, AutoHeal.powerOrb, AutoHeal.orbHp, AutoHeal.gloomLock, AutoHeal.gloomLockHP, AutoHeal.overFlowMana, AutoHeal.fromInv);
     }
     

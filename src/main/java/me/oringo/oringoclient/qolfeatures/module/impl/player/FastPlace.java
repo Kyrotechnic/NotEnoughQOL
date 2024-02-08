@@ -19,6 +19,8 @@ public class FastPlace extends Module
     
     public FastPlace() {
         super("Fast Place", Category.PLAYER);
+        this.setDescription("right click autoclicker");
+        this.flag = FlagType.SAFE;
         this.addSetting(this.placeDelay = new NumberSetting("Place delay", 2.0, 0.0, 4.0, 1.0));
     }
     

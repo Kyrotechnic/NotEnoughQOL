@@ -18,6 +18,9 @@ public class Derp extends Module
     
     public Derp() {
         super("Derp", Category.OTHER);
+
+        this.setDescription("Spin weeeee");
+
         this.packets = new ArrayList<Packet<?>>();
     }
     

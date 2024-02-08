@@ -41,6 +41,7 @@ public class CustomInterfaces extends Module
     
     public CustomInterfaces() {
         super("Interfaces", Category.RENDER);
+        this.setDescription("Uses modernish rendering");
         this.customScoreboard = new BooleanSetting("Custom Scoreboard", true);
         this.customFont = new BooleanSetting("Custom Font", true) {
             @Override

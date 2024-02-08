@@ -10,5 +10,9 @@ public class NoHitDelay extends Module
 {
     public NoHitDelay() {
         super("No hit delay", 0, Category.OTHER);
+
+        this.setDescription("Removes 1.8 hit delay");
+
+        this.flag = FlagType.SAFE;
     }
 }

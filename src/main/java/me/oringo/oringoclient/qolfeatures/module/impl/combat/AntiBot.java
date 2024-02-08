@@ -27,6 +27,7 @@ public class AntiBot extends Module
     
     public AntiBot() {
         super("Anti Bot", Category.COMBAT);
+        this.setDescription("Hides server bots (NOT NPCS)");
         this.addSettings(AntiBot.mode, AntiBot.ticksInvis, AntiBot.tabTicks, AntiBot.npcCheck);
     }
     

@@ -33,6 +33,9 @@ public class TerminalAura extends Module
     
     public TerminalAura() {
         super("Terminal Aura", 0, Category.DUNGEONS);
+
+        this.setDescription("Automatically opens terminals");
+
         this.onGroud = new BooleanSetting("Only ground", true);
         this.reach = new NumberSetting("Terminal Reach", 6.0, 2.0, 6.0, 0.1);
         this.addSettings(this.reach, this.onGroud);

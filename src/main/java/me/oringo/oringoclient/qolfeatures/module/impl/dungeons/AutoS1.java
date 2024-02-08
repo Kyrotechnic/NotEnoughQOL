@@ -24,6 +24,8 @@ public class AutoS1 extends Module
     
     public AutoS1() {
         super("Auto SS", 0, Category.DUNGEONS);
+
+        this.setDescription("Auto simon says");
     }
     
     @SubscribeEvent

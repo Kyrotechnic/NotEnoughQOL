@@ -16,6 +16,7 @@ public class Velocity extends Module
     
     public Velocity() {
         super("Velocity", 0, Category.PLAYER);
+        this.setDescription("Modifies velocity sent by server");
         this.vModifier = new NumberSetting("Vertical", 0.0, -2.0, 2.0, 0.05);
         this.hModifier = new NumberSetting("Horizontal", 0.0, -2.0, 2.0, 0.05);
         this.skyblockKB = new BooleanSetting("Skyblock kb", true);

@@ -25,6 +25,9 @@ public class Aimbot extends Module
     
     public Aimbot() {
         super("Blood aimbot", 0, Category.DUNGEONS);
+
+        this.setDescription("Automatically LCMs blood mobs");
+
         this.addSetting(this.yOffset = new NumberSetting("Y offset", 0.0, -2.0, 2.0, 0.1));
     }
     

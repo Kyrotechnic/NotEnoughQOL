@@ -27,6 +27,10 @@ public class RemoveAnnoyingMobs extends Module
     
     public RemoveAnnoyingMobs() {
         super("Remove Mobs", 0, Category.SKYBLOCK);
+
+        this.setDescription("Hide summons");
+        this.flag = FlagType.SAFE;
+
         this.hidePlayers = new BooleanSetting("Hide players", false);
         this.addSettings(this.hidePlayers);
     }

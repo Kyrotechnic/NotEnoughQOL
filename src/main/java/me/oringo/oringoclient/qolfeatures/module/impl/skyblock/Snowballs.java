@@ -22,6 +22,9 @@ public class Snowballs extends Module
     
     public Snowballs() {
         super("Snowballs", Category.SKYBLOCK);
+
+        this.setDescription("Spams snowballs fast");
+
         this.pickupstash = new BooleanSetting("Pick up stash", true);
         this.inventory = new BooleanSetting("Inventory", false);
         this.addSettings(this.pickupstash, this.inventory);

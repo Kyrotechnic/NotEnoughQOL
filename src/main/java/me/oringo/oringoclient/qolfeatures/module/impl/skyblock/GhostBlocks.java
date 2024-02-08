@@ -33,6 +33,10 @@ public class GhostBlocks extends Module
     
     public GhostBlocks() {
         super("Ghost Blocks", 0, Category.SKYBLOCK);
+
+        this.setDescription("Creates ghostblock with key");
+        this.flag = FlagType.SAFE;
+
         this.range = new NumberSetting("Range", 10.0, 1.0, 100.0, 1.0);
         this.cordGhostBlocks = new BooleanSetting("Cord blocks", true);
         this.mode = new ModeSetting("Speed", "Fast", new String[] { "Slow", "Fast" });

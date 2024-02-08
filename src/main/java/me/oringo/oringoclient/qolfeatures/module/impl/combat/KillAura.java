@@ -79,6 +79,9 @@ public class KillAura extends Module
     
     public KillAura() {
         super("Kill Aura", 0, Category.COMBAT);
+
+        this.setDescription("Automatically attacks entities for you");
+
         this.namesOnly = new BooleanSetting("Names only", false);
         this.middleClick = new BooleanSetting("Middle click to add", false);
         this.players = new BooleanSetting("Players", false);

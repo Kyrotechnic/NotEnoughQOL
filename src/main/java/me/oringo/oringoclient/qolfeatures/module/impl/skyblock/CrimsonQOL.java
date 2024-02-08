@@ -38,6 +38,7 @@ public class CrimsonQOL extends Module
     
     public CrimsonQOL() {
         super("Crimson QOL", Category.SKYBLOCK);
+        this.setDescription("Crimson Isles qol ig");
         this.hostageId = -1;
         this.addSettings(CrimsonQOL.autoHostage, CrimsonQOL.kuudraESP, CrimsonQOL.autoCloak, CrimsonQOL.time, CrimsonQOL.distance);
     }

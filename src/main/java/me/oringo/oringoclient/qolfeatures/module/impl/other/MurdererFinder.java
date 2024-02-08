@@ -36,6 +36,10 @@ public class MurdererFinder extends Module
     
     public MurdererFinder() {
         super("Murder Mystery", Category.OTHER);
+
+        this.setDescription("Murder Mystery helper");
+        this.flag = FlagType.SAFE;
+
         this.knives = new ArrayList<Item>(Arrays.asList(Items.iron_sword, Items.stone_sword, Items.iron_shovel, Items.stick, Items.wooden_axe, Items.wooden_sword, Blocks.deadbush.getItem((World)null, (BlockPos)null), Items.stone_shovel, Items.diamond_shovel, Items.quartz, Items.pumpkin_pie, Items.golden_pickaxe, Items.apple, Items.name_tag, Blocks.sponge.getItem((World)null, (BlockPos)null), Items.carrot_on_a_stick, Items.bone, Items.carrot, Items.golden_carrot, Items.cookie, Items.diamond_axe, Blocks.red_flower.getItem((World)null, (BlockPos)null), Items.prismarine_shard, Items.cooked_beef, Items.golden_sword, Items.diamond_sword, Items.diamond_hoe, (Item)Items.shears, Items.fish, Items.dye, Items.boat, Items.speckled_melon, Items.blaze_rod, Items.fish));
         this.autoSay = new BooleanSetting("Say murderer", false);
         this.ingotESP = new BooleanSetting("Ingot ESP", true);

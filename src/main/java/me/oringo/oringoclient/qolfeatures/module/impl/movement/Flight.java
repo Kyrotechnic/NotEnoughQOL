@@ -42,6 +42,9 @@ public class Flight extends Module
     
     public Flight() {
         super("Flight", 0, Category.PLAYER);
+
+        this.setDescription("It's fly, come on");
+
         this.disablerTimer = new MilliTimer();
         this.autoDisableTimer = new MilliTimer();
         this.addSettings(Flight.speed, Flight.mode, Flight.timerSpeed, Flight.time, Flight.test, Flight.autoDisableHypixel, Flight.autoDisable);

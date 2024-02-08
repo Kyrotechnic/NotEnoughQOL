@@ -14,6 +14,8 @@ public class Hud extends Module {
     {
         super("Hud", Category.RENDER);
 
+        this.setDescription("Renders hud and more info");
+
         this.addSettings(
                 bps
         );

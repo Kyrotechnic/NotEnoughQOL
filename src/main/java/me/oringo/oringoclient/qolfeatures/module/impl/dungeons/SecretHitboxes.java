@@ -17,6 +17,10 @@ public class SecretHitboxes extends Module {
     {
         super("Secret Hitboxes", Module.Category.DUNGEONS);
 
+        this.setDescription("Increases hitbox sizes of secrets");
+
+        this.flag = FlagType.SAFE;
+
         addSettings(
                 lever,
                 button,

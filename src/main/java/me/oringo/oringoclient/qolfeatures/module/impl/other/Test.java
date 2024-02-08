@@ -12,6 +12,8 @@ public class Test extends Module
 {
     public Test() {
         super("Test", Category.OTHER);
+
+        this.setDescription("what the frick");
     }
     
     @SubscribeEvent

@@ -28,6 +28,9 @@ public class AntiVoid extends Module
     
     public AntiVoid() {
         super("Anti Void", 0, Category.PLAYER);
+
+        this.setDescription("Prevents falling into the void");
+
         this.fallDistance = new NumberSetting("Fall distance", 1.0, 0.5, 10.0, 0.1);
         this.mode = new ModeSetting("Mode", "Blink", new String[] { "Flag", "Blink" });
         this.lastPos = new Vec3(0.0, 0.0, 0.0);

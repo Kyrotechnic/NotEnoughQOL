@@ -31,6 +31,9 @@ public class AutoSumoBot extends Module
     
     public AutoSumoBot() {
         super("Auto Sumo", 0, Category.OTHER);
+
+        this.setDescription("Automatically plays sumo for you");
+
         this.webhook = new StringSetting("Webhook");
         this.skipNoLoses = new BooleanSetting("Skip no loses", true);
         this.addSettings(this.webhook);

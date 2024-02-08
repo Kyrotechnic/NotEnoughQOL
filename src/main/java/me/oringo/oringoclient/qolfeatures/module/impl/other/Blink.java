@@ -26,6 +26,9 @@ public class Blink extends Module
     
     public Blink() {
         super("Blink", Category.OTHER);
+
+        this.setDescription("Fake lag");
+
         this.onlyPos = new BooleanSetting("Only pos packets", false);
         this.pulse = new BooleanSetting("Pulse", false);
         this.pulseTicks = new NumberSetting("Pulse ticks", 10.0, 1.0, 100.0, 1.0) {

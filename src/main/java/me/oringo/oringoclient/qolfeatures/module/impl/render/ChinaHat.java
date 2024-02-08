@@ -37,6 +37,7 @@ public class ChinaHat extends Module
     
     public ChinaHat() {
         super("China hat", 0, Category.RENDER);
+        this.setDescription("ching chong");
         this.radius = new NumberSetting("Radius", 0.7, 0.5, 1.0, 0.01);
         this.height = new NumberSetting("Height", 0.3, 0.10000000149011612, 0.699999988079071, 0.01);
         this.pos = new NumberSetting("Position", 0.1, -0.5, 0.5, 0.01);

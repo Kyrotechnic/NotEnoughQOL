@@ -17,6 +17,7 @@ public class FastBreak extends Module
         super("Fast break", 0, Category.PLAYER);
         this.mineSpeed = new NumberSetting("Mining speed", 1.4, 1.0, 1.6, 0.1);
         this.maxBlocks = new NumberSetting("Additional blocks", 0.0, 0.0, 4.0, 1.0);
+        this.setDescription("Increases mining speed");
         this.addSettings(this.maxBlocks, this.mineSpeed);
     }
 }

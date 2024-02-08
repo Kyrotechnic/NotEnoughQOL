@@ -29,6 +29,7 @@ public class Criticals extends Module
     
     public Criticals() {
         super("Criticals", Category.COMBAT);
+        this.setDescription("Crits without jumping");
         this.ticks = 0;
         this.offsets = new float[] { 0.0625f, 0.03125f };
         this.timer = new MilliTimer();

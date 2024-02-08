@@ -23,6 +23,7 @@ public class NoFall extends Module
     
     public NoFall() {
         super("NoFall", Category.PLAYER);
+        this.setDescription("No fall damage wtf");
         this.mode = new ModeSetting("Mode", "Hypixel", new String[] { "Hypixel", "Packet", "NoGround" });
         this.hypixelSpoofMode = new ModeSetting("Spoof mode", "Fall", new String[] { "Always", "Fall" }) {
             @Override

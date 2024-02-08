@@ -25,6 +25,7 @@ public class Trial extends Module
     
     public Trial() {
         super("Trail", Category.RENDER);
+        this.setDescription("it's tron!");
         this.addSettings(Trial.count);
     }
     

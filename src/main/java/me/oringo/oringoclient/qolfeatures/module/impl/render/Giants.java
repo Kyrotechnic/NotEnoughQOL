@@ -17,6 +17,7 @@ public class Giants extends Module
     
     public Giants() {
         super("Giants", Category.RENDER);
+        this.setDescription("Modify size of players and mobs");
         this.scale = new NumberSetting("Scale", 1.0, 0.1, 5.0, 0.1);
         this.mobs = new BooleanSetting("Mobs", true);
         this.players = new BooleanSetting("Players", true);

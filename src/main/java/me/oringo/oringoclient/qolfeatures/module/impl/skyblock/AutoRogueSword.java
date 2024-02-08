@@ -22,6 +22,7 @@ public class AutoRogueSword extends Module
     
     public AutoRogueSword() {
         super("Auto Rogue", 0, Category.SKYBLOCK);
+        this.setDescription("Automatically spams rogue sword (old)");
         this.clicks = new NumberSetting("Clicks", 50.0, 1.0, 1000.0, 10.0);
         this.delay = new NumberSetting("Delay", 29.0, 0.0, 100.0, 1.0);
         this.onlyDung = new BooleanSetting("Only dungeon", false);

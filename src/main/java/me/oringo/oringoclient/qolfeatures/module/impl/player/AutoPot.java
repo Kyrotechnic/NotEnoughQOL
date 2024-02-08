@@ -35,6 +35,7 @@ public class AutoPot extends Module
         this.fromInv = new BooleanSetting("From inventory", false);
         this.delays = new HashMap<Potion, Long>();
         this.slots = new ArrayList<Integer>();
+        this.setDescription("Automatically splashes pots on yourself");
         this.addSettings(this.delay, this.onGround);
         this.addSettings(this.health, this.fromInv);
     }

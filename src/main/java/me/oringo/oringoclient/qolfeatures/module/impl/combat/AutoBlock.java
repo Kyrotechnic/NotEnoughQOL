@@ -31,6 +31,7 @@ public class AutoBlock extends Module
     
     public AutoBlock() {
         super("AutoBlock", Category.COMBAT);
+        this.setDescription("Automatically blocks for you");
         this.mode = new ModeSetting("Mode", "Hypixel", new String[] { "Hypixel", "Vanilla" });
         this.blockTime = new NumberSetting("Block time", 500.0, 50.0, 2000.0, 50.0);
         this.players = new BooleanSetting("Players", true);

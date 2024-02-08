@@ -15,6 +15,7 @@ public class Hitboxes extends Module
     
     public Hitboxes() {
         super("Hitboxes", Category.COMBAT);
+        this.setDescription("Increases hitbox sizes of entities");
         this.onlyPlayers = new BooleanSetting("Only players", false);
         this.expand = new NumberSetting("Expand", 0.5, 0.1, 1.0, 0.1);
         this.addSettings(this.expand);

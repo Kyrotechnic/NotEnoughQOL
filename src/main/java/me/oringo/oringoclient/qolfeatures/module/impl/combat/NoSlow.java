@@ -26,6 +26,9 @@ public class NoSlow extends Module
     
     public NoSlow() {
         super("NoSlow", 0, Category.COMBAT);
+
+        this.setDescription("Prevents slowdown with bow/blocking");
+
         this.eatingSlowdown = new NumberSetting("Eating slow", 1.0, 0.2, 1.0, 0.1);
         this.swordSlowdown = new NumberSetting("Sword slow", 1.0, 0.2, 1.0, 0.1);
         this.bowSlowdown = new NumberSetting("Bow slow", 1.0, 0.2, 1.0, 0.1);

@@ -47,6 +47,9 @@ public class ClickGUI extends GuiScreen
         final int pwidth = 100;
         final int pheight = 20;
         int px = 100;
+        lastX = 0;
+        lastY = 0;
+        lastMoved.reset();
         final int py = 10;
         for (final Module.Category c : Module.Category.values()) {
             ClickGUI.panels.add(new Panel(c, (float)px, (float)py, (float)pwidth, (float)pheight));
@@ -136,6 +139,10 @@ public class ClickGUI extends GuiScreen
             }
         }
     }
+
+    private static int lastX;
+    private static int lastY;
+    private static MilliTimer lastMoved = new MilliTimer();
     
     private void handle(int mouseX, int mouseY, final int key, final float partialTicks, final Handle handle) {
         final int toggled = OringoClient.clickGui.getColor().getRGB();
@@ -148,6 +155,17 @@ public class ClickGUI extends GuiScreen
             mouseY /= (int)scale;
             GL11.glScaled((double)scale, (double)scale, (double)scale);
         }
+
+        if (mouseX != lastX || mouseY != lastY)
+        {
+            lastMoved.reset();
+        }
+
+        Module hovered = null;
+
+        lastX = mouseX;
+        lastY = mouseY;
+
         if (handle == Handle.DRAW) {
             int blur = 0;
             final String selected = OringoClient.clickGui.blur.getSelected();
@@ -213,6 +231,10 @@ public class ClickGUI extends GuiScreen
                 if (module2.isDevOnly() && !OringoClient.devMode) {
                     continue;
                 }
+                if (module2.flag == Module.FlagType.RISKY && OringoClient.clickGui.hideRisky.isEnabled())
+                {
+                    continue;
+                }
                 Label_0942: {
                     switch (handle) {
                         case DRAW: {
@@ -221,6 +243,12 @@ public class ClickGUI extends GuiScreen
                             }
                             RenderUtils.drawRect(p.x, y, p.x + p.width, y + moduleHeight, module2.isToggled() ? new Color(toggled).getRGB() : ClickGUI.background);
                             Fonts.robotoMediumBold.drawSmoothCenteredString(module2.getName(), p.x + p.width / 2.0f, y + moduleHeight / 2.0f - Fonts.robotoMediumBold.getHeight() / 2.0f, Color.white.getRGB());
+
+                            if (module2.description != null && lastMoved.hasTimePassed(500) && isHovered(mouseX, mouseY, p.x, y, moduleHeight, p.width))
+                            {
+                                hovered = module2;
+                            }
+
                             break;
                         }
                         case CLICK: {
@@ -415,6 +443,22 @@ public class ClickGUI extends GuiScreen
                 p.scrolling = Math.min(0, Math.max(p.scrolling, -this.getTotalSettingsCount(p)));
             }
         }
+
+        if (hovered != null)
+        {
+            int xT = lastX;
+            int yT = lastY;
+
+            double widthT = Fonts.robotoMedium.getStringWidth(hovered.description) + 4;
+            double heightT = Fonts.robotoMedium.getHeight() + 2;
+
+            RenderUtils.drawRoundedRect(xT, yT - (heightT / 2), widthT + xT, heightT + yT, 2, background);
+
+            Fonts.robotoMedium.drawString(hovered.description, xT + 2, yT  - (heightT / 2) + 3, Color.WHITE.getRGB());
+
+            hovered = null;
+        }
+
         GL11.glPopMatrix();
         this.mc.gameSettings.guiScale = prevScale;
     }
@@ -424,7 +468,10 @@ public class ClickGUI extends GuiScreen
         this.draggingSlider = null;
         this.binding = null;
         this.settingString = null;
+        lastX = 0;
+        lastY = 0;
         super.onGuiClosed();
+        lastMoved.reset();
     }
     
     public boolean isHovered(final int mouseX, final int mouseY, final double x, final double y, final double height, final double width) {

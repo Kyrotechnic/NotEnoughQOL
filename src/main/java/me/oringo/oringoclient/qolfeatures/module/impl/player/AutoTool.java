@@ -26,6 +26,7 @@ public class AutoTool extends Module
         this.tools = new BooleanSetting("Tools", true);
         this.swords = new BooleanSetting("Swords", true);
         this.delay = new MilliTimer();
+        this.setDescription("Automatically uses required tool");
         this.addSettings(this.tools, this.swords);
     }
     

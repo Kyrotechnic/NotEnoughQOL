@@ -23,6 +23,10 @@ public class Disabler extends Module
     
     public Disabler() {
         super("Disabler", Category.OTHER);
+
+        this.setDescription("Disabler for hypixel's anticheat");
+        this.flag = FlagType.SAFE;
+
         this.addSettings(Disabler.timerSemi, Disabler.first);
     }
     

@@ -21,6 +21,8 @@ public class Nametags extends Module
 {
     public Nametags() {
         super("Nametags", Category.RENDER);
+
+        this.setDescription("what the frick nametags");
     }
     
     @SubscribeEvent
