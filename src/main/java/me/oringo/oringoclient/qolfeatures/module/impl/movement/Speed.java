@@ -34,7 +34,7 @@ public class Speed extends Module
     boolean canApplySpeed;
     
     public Speed() {
-        super("Speed", Category.MOVEMENT);
+        super("Speed", Category.PLAYER);
         this.stopOnDisable = new BooleanSetting("Stop on disable", true);
         this.disableOnFlag = new BooleanSetting("Disable on flag", true);
         this.sneak = new BooleanSetting("Sneak timer", true);

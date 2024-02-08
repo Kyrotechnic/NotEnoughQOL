@@ -14,7 +14,7 @@ public class Sprint extends Module
     public BooleanSetting keep;
     
     public Sprint() {
-        super("Sprint", 0, Category.MOVEMENT);
+        super("Sprint", 0, Category.PLAYER);
         this.omni = new BooleanSetting("OmniSprint", false);
         this.keep = new BooleanSetting("KeepSprint", true);
         this.addSettings(this.keep, this.omni);

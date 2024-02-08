@@ -176,7 +176,7 @@ public class Module
         COMBAT("Combat"), 
         SKYBLOCK("Skyblock"), 
         RENDER("Render"), 
-        MOVEMENT("Movement"), 
+        KUUDRA("Kuudra"),
         PLAYER("Player"), 
         OTHER("Other"), 
         DUNGEONS("Dungeons");

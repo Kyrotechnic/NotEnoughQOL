@@ -41,7 +41,7 @@ public class Flight extends Module
     private int ticks;
     
     public Flight() {
-        super("Flight", 0, Category.MOVEMENT);
+        super("Flight", 0, Category.PLAYER);
         this.disablerTimer = new MilliTimer();
         this.autoDisableTimer = new MilliTimer();
         this.addSettings(Flight.speed, Flight.mode, Flight.timerSpeed, Flight.time, Flight.test, Flight.autoDisableHypixel, Flight.autoDisable);

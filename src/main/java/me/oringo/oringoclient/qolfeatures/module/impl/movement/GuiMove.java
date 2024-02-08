@@ -28,7 +28,7 @@ public class GuiMove extends Module
     public static final KeyBinding[] binds;
     
     public GuiMove() {
-        super("InvMove", Category.MOVEMENT);
+        super("InvMove", Category.PLAYER);
         this.rotate = new BooleanSetting("Rotate", true);
         this.drag = new BooleanSetting("Alt drag", true) {
             @Override

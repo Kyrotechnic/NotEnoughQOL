@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.*;
 public class SafeWalk extends Module
 {
     public SafeWalk() {
-        super("Eagle", 0, Category.MOVEMENT);
+        super("Eagle", 0, Category.PLAYER);
     }
     
     @Override

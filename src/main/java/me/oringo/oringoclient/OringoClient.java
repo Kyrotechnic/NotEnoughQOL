@@ -5,6 +5,7 @@
 package me.oringo.oringoclient;
 
 import me.oringo.oringoclient.qolfeatures.module.impl.dungeons.*;
+import me.oringo.oringoclient.qolfeatures.module.impl.kuudra.KuudraTracker;
 import me.oringo.oringoclient.qolfeatures.module.impl.other.Timer;
 import net.minecraftforge.fml.common.*;
 import net.minecraft.client.*;
@@ -99,7 +100,7 @@ public class OringoClient
     public static HashMap<File, ResourceLocation> capesLoaded;
     private MilliTimer timer;
     private boolean wasOnline;
-    public static ClientMode mode = ClientMode.DEVELOPMENT;
+    public static ClientMode mode = ClientMode.PRIVATE;
     
     public OringoClient() {
         this.timer = new MilliTimer();
@@ -203,6 +204,7 @@ public class OringoClient
         OringoClient.modules.add(gardenHelper);
         OringoClient.modules.add(secretHitboxes);
         OringoClient.modules.add(HudComponent.hud);
+        OringoClient.modules.add(new KuudraTracker());
 
         OringoClient.interfaces.setToggled(true);
         BlurUtils.registerListener();

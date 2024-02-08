@@ -23,7 +23,7 @@ public class Step extends Module
     private int stage;
     
     public Step() {
-        super("Step", Category.MOVEMENT);
+        super("Step", Category.PLAYER);
         this.mode = new ModeSetting("Mode", "NCP", new String[] { "NCP" });
         this.timer = new NumberSetting("Timer", 0.4, 0.1, 1.0, 0.1);
         this.addSettings(this.mode, this.timer);

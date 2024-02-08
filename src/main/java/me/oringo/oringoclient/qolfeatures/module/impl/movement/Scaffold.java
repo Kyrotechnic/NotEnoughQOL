@@ -40,7 +40,7 @@ public class Scaffold extends Module
     boolean flag;
     
     public Scaffold() {
-        super("Scaffold", Category.MOVEMENT);
+        super("Scaffold", Category.PLAYER);
         this.timer1 = new MilliTimer();
         this.slowdowntimer = new MilliTimer();
         this.addSettings(Scaffold.distance, Scaffold.minDelay, Scaffold.maxDelay, Scaffold.timer, Scaffold.towerTimer, Scaffold.tower, Scaffold.sprint, Scaffold.safeWalk, Scaffold.disableSpeed, Scaffold.disableAura, Scaffold.safe);
