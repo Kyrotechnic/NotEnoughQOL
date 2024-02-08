@@ -151,7 +151,7 @@ public class Gui extends Module
                 final MinecraftFontRenderer font = Fonts.tahomaSmall;
                 GL11.glPushMatrix();
                 final ScaledResolution resolution = new ScaledResolution(Gui.mc);
-                final List<Module> list = (List<Module>)OringoClient.modules.stream().filter(module -> module.getCategory() != Category.RENDER && (module.isToggled() || module.toggledTime.getTimePassed() <= 250L)).sorted(Comparator.comparingDouble(module -> font.getStringWidth(module.getName()))).collect(Collectors.toList());
+                final List<Module> list = OringoClient.modules.stream().filter(module -> (module.isToggled() || module.toggledTime.getTimePassed() <= 250L)).sorted(Comparator.comparingDouble(module -> font.getStringWidth(module.getName()))).collect(Collectors.toList());
                 Collections.reverse(list);
                 float y = 2.0f;
                 int x = list.size();

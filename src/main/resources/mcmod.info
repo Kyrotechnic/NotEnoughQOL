@@ -1,9 +1,9 @@
 [
   {
-    "modid": "mod",
-    "name": "Mod",
+    "modid": "notenoughqol",
+    "name": "NotEnoughQOL",
     "description": "",
-    "version": "1.9.1",
+    "version": "1.0.3",
     "mcversion": "1.8.9",
     "updateUrl": "",
     "authorList": [

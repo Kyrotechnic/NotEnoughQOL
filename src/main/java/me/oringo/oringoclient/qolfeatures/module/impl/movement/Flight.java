@@ -138,9 +138,9 @@ public class Flight extends Module
                                 final PlayerCapabilities capabilities = new PlayerCapabilities();
                                 capabilities.allowFlying = true;
                                 capabilities.isFlying = false;
-                                Flight.mc.getNetHandler().getNetworkManager().sendPacket((Packet)new C13PacketPlayerAbilities(capabilities));
+                                Flight.mc.getNetHandler().getNetworkManager().sendPacket(new C13PacketPlayerAbilities(capabilities));
                                 capabilities.isFlying = true;
-                                Flight.mc.getNetHandler().getNetworkManager().sendPacket((Packet)new C13PacketPlayerAbilities(capabilities));
+                                Flight.mc.getNetHandler().getNetworkManager().sendPacket(new C13PacketPlayerAbilities(capabilities));
                                 this.isFlying = true;
                                 this.disablerTimer.reset();
                             }
@@ -264,9 +264,9 @@ public class Flight extends Module
                 final float f = (float)(hitVec.xCoord - hitPos.getX());
                 final float f2 = (float)(hitVec.yCoord - hitPos.getY());
                 final float f3 = (float)(hitVec.zCoord - hitPos.getZ());
-                Flight.mc.getNetHandler().getNetworkManager().sendPacket((Packet)new C08PacketPlayerBlockPlacement(rayrace.getBlockPos(), rayrace.sideHit.getIndex(), Flight.mc.thePlayer.getHeldItem(), f, f2, f3));
-                Flight.mc.getNetHandler().getNetworkManager().sendPacket((Packet)new C0APacketAnimation());
-                Flight.mc.thePlayer.getHeldItem().onItemUse((EntityPlayer)Flight.mc.thePlayer, (World)Flight.mc.theWorld, hitPos, rayrace.sideHit, f, f2, f3);
+                Flight.mc.getNetHandler().getNetworkManager().sendPacket(new C08PacketPlayerBlockPlacement(rayrace.getBlockPos(), rayrace.sideHit.getIndex(), Flight.mc.thePlayer.getHeldItem(), f, f2, f3));
+                Flight.mc.getNetHandler().getNetworkManager().sendPacket(new C0APacketAnimation());
+                Flight.mc.thePlayer.getHeldItem().onItemUse(Flight.mc.thePlayer, (World)Flight.mc.theWorld, hitPos, rayrace.sideHit, f, f2, f3);
                 this.placed = true;
             }
             PlayerUtils.swapToSlot(prev);

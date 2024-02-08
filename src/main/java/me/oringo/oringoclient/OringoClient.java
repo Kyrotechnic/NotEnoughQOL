@@ -102,7 +102,7 @@ public class OringoClient
     public static final Bazaar bazaar = new Bazaar();
     private MilliTimer timer;
     private boolean wasOnline;
-    public static ClientMode mode = ClientMode.PRIVATE;
+    public static ClientMode mode = ClientMode.DEVELOPMENT;
     
     public OringoClient() {
         this.timer = new MilliTimer();
